@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway-Bold"), url("../../fonts/Raleway-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ruda-Medium"), url("../../fonts/Ruda-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Ruda-Bold"), url("../../fonts/Ruda-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Ruda-ExtraBold"), url("../../fonts/Ruda-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Ruda-Black"), url("../../fonts/Ruda-Black.woff") format("woff");
+}/*# sourceMappingURL=fonts.css.map */

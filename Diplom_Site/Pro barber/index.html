@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./source/scss/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <title>Pro barber</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__nav_background"></div>
+            <div class="header__content  custom__container">
+                <div class="header__row">
+                    <div class="header__row_box">
+                        <a href="index.html"><img src="./images/Лого.svg" alt="logo" class="header__logo"></a>
+                        <div class="header__nav">
+                            <ul class="header__nav_menu">
+                                <li><a class="header__nav_link" href="index.html">Главная</a></li>
+                                <li><a class="header__nav_link" href="services.html">Услуги</a></li>
+                                <li><a class="header__nav_link" href="reviews.html">Отзывы</a></li>
+                                <li><a class="header__nav_link" href="contacts.html">Контакты</a></li>
+                            </ul>
+                            <div class="header__nav_social">
+                                <a href="#" class="header__social_link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect class="header__nav_vk_rect" x="1" y="1" width="28" height="28" rx="9"
+                                            stroke="white" stroke-width="2" />
+                                        <path class="header__nav_stroke"
+                                            d="M16.75 13.9576V10.8776C16.75 10.1834 16.6178 10.0443 15.8925 10.0443L13.8362 10.0001C13.1957 10.0001 12.8755 10.0001 12.746 10.1976C12.6165 10.3951 12.76 10.6659 13.0461 11.2059C13.2054 11.5059 13.2911 11.7234 13.2911 12.0601V14.2767C13.2911 14.9767 13.2911 15.3275 13.0111 15.4317C12.7311 15.535 12.4992 15.3 12.0337 14.83C10.8963 13.6767 10.303 12.2367 9.91363 10.6667C9.83313 10.3417 9.79288 10.1792 9.67213 10.0893C9.55138 9.99925 9.37901 10.0001 9.03601 10.0001H7.11102C6.68928 10.0001 6.4784 10.0001 6.34628 10.1417C6.21503 10.2842 6.2404 10.4659 6.29115 10.8284C6.75315 14.1009 9.77451 19.4667 15.3561 19.9783C16.3448 20.0683 16.75 19.8142 16.75 18.7825C16.75 18.1975 16.7368 17.2525 17.5095 17.1284C17.9146 17.0634 18.1867 17.2009 18.6391 17.5617C19.4231 18.1883 19.8343 18.9533 20.1204 19.5342C20.3103 19.9192 20.4512 20 20.8974 20H22.7122C23.6292 20 23.8786 19.7867 23.4699 18.9667C23.0081 18.0471 22.3543 17.2268 21.5484 16.5559C20.9919 16.1 20.7146 15.8725 20.6997 15.7042C20.6831 15.5367 20.8869 15.2992 21.2947 14.8242C22.0822 13.9059 23.1549 12.4651 23.6554 10.9359C23.9039 10.1776 23.6703 10.0001 22.8644 10.0001H21.2343C20.4442 10.0001 20.4451 9.97425 20.2587 10.8276C19.9559 12.2117 18.9655 13.5426 18.0345 14.4484C17.5926 14.8784 17.3257 15.1375 17.0501 15.0317C16.7745 14.9259 16.75 14.6042 16.75 13.9576Z"
+                                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="header__social_link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="header__nav_stroke"
+                                            d="M29.0234 15.0117C29.0234 22.7501 22.7501 29.0234 15.0117 29.0234C7.27325 29.0234 1 22.7501 1 15.0117C1 7.27325 7.27325 1 15.0117 1C22.7501 1 29.0234 7.27325 29.0234 15.0117Z"
+                                            stroke="white" stroke-width="2" />
+                                        <path class="header__nav_tg_fill" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.78123 14.848C11.1538 12.9307 14.0766 11.6914 15.5497 11.0834C19.7119 9.35312 20.577 9.04914 21.1382 9.02576C21.2551 9.02576 21.5357 9.04914 21.7228 9.18944C21.8631 9.30635 21.9098 9.47003 21.9332 9.58694C21.9566 9.70386 21.98 9.96106 21.9566 10.1715C21.7228 12.5332 20.7641 18.3087 20.2497 20.9509C20.0392 22.0733 19.6183 22.4474 19.2208 22.4942C18.3557 22.5643 17.6776 21.9096 16.8358 21.3718C15.5264 20.5067 14.7781 19.9689 13.4921 19.1271C12.019 18.145 12.9776 17.6072 13.8194 16.742C14.0299 16.5082 17.888 13.0242 17.9582 12.6968C17.9582 12.6501 17.9815 12.5098 17.888 12.4396C17.7945 12.3695 17.6776 12.3929 17.584 12.4162C17.4437 12.4396 15.3393 13.8426 11.2473 16.6018C10.6394 17.0226 10.1016 17.2097 9.61053 17.2097C9.07273 17.2097 8.04389 16.9057 7.27226 16.6485C6.33696 16.3445 5.58871 16.1809 5.65886 15.6664C5.70562 15.4092 6.07975 15.1286 6.78123 14.848Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__social">
+                        <a href="#" class="header__social_link">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect class="header__nav_vk_rect" x="1" y="1" width="28" height="28" rx="9"
+                                    stroke="white" stroke-width="2" />
+                                <path class="header__nav_stroke"
+                                    d="M16.75 13.9576V10.8776C16.75 10.1834 16.6178 10.0443 15.8925 10.0443L13.8362 10.0001C13.1957 10.0001 12.8755 10.0001 12.746 10.1976C12.6165 10.3951 12.76 10.6659 13.0461 11.2059C13.2054 11.5059 13.2911 11.7234 13.2911 12.0601V14.2767C13.2911 14.9767 13.2911 15.3275 13.0111 15.4317C12.7311 15.535 12.4992 15.3 12.0337 14.83C10.8963 13.6767 10.303 12.2367 9.91363 10.6667C9.83313 10.3417 9.79288 10.1792 9.67213 10.0893C9.55138 9.99925 9.37901 10.0001 9.03601 10.0001H7.11102C6.68928 10.0001 6.4784 10.0001 6.34628 10.1417C6.21503 10.2842 6.2404 10.4659 6.29115 10.8284C6.75315 14.1009 9.77451 19.4667 15.3561 19.9783C16.3448 20.0683 16.75 19.8142 16.75 18.7825C16.75 18.1975 16.7368 17.2525 17.5095 17.1284C17.9146 17.0634 18.1867 17.2009 18.6391 17.5617C19.4231 18.1883 19.8343 18.9533 20.1204 19.5342C20.3103 19.9192 20.4512 20 20.8974 20H22.7122C23.6292 20 23.8786 19.7867 23.4699 18.9667C23.0081 18.0471 22.3543 17.2268 21.5484 16.5559C20.9919 16.1 20.7146 15.8725 20.6997 15.7042C20.6831 15.5367 20.8869 15.2992 21.2947 14.8242C22.0822 13.9059 23.1549 12.4651 23.6554 10.9359C23.9039 10.1776 23.6703 10.0001 22.8644 10.0001H21.2343C20.4442 10.0001 20.4451 9.97425 20.2587 10.8276C19.9559 12.2117 18.9655 13.5426 18.0345 14.4484C17.5926 14.8784 17.3257 15.1375 17.0501 15.0317C16.7745 14.9259 16.75 14.6042 16.75 13.9576Z"
+                                    stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#" class="header__social_link">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="header__nav_stroke"
+                                    d="M29.0234 15.0117C29.0234 22.7501 22.7501 29.0234 15.0117 29.0234C7.27325 29.0234 1 22.7501 1 15.0117C1 7.27325 7.27325 1 15.0117 1C22.7501 1 29.0234 7.27325 29.0234 15.0117Z"
+                                    stroke="white" stroke-width="2" />
+                                <path class="header__nav_tg_fill" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.78123 14.848C11.1538 12.9307 14.0766 11.6914 15.5497 11.0834C19.7119 9.35312 20.577 9.04914 21.1382 9.02576C21.2551 9.02576 21.5357 9.04914 21.7228 9.18944C21.8631 9.30635 21.9098 9.47003 21.9332 9.58694C21.9566 9.70386 21.98 9.96106 21.9566 10.1715C21.7228 12.5332 20.7641 18.3087 20.2497 20.9509C20.0392 22.0733 19.6183 22.4474 19.2208 22.4942C18.3557 22.5643 17.6776 21.9096 16.8358 21.3718C15.5264 20.5067 14.7781 19.9689 13.4921 19.1271C12.019 18.145 12.9776 17.6072 13.8194 16.742C14.0299 16.5082 17.888 13.0242 17.9582 12.6968C17.9582 12.6501 17.9815 12.5098 17.888 12.4396C17.7945 12.3695 17.6776 12.3929 17.584 12.4162C17.4437 12.4396 15.3393 13.8426 11.2473 16.6018C10.6394 17.0226 10.1016 17.2097 9.61053 17.2097C9.07273 17.2097 8.04389 16.9057 7.27226 16.6485C6.33696 16.3445 5.58871 16.1809 5.65886 15.6664C5.70562 15.4092 6.07975 15.1286 6.78123 14.848Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="hero view">
+                <div class="hero__content custom__container">
+                    <div class="hero__row">
+                        <div class="hero__block">
+                            <h1 class="hero__block_head">Добро пожаловать в <span class="hero__block_head-cool"> Pro
+                                    barber</span></h1>
+                            <p class="hero__block_descr">Место, где стрижка становится искусством,
+                                а уход за внешностью — особым ритуалом.</p>
+                            <div class="hero__block_row">
+                                <a class="hero__block_btn hero__block_btn-fst" href="#entry">Записаться</a>
+                                <a class="hero__block_btn hero__block_btn-sec" href="#reviews">Отзывы</a>
+                            </div>
+                        </div>
+                        <img class="hero__img" src="./images/hero.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="found view">
+                <div class="found__content custom__container">
+                    <div class="found__row">
+                        <img src="./images/found.png" alt="" class="found__img">
+                        <div class="found__block">
+                            <h2 class="found__block_head">Что вы
+                                найдёте у нас</h2>
+                            <div class="found__box">
+                                <p class="found__box_descr"><span class="found__box_descr-main"> Профессиональные
+                                        мастера:</span> опытные барберы, знающие последние тренды и классические стили
+                                </p>
+                                <p class="found__box_descr found__box_descr-sec"><span class="found__box_descr-main">
+                                        Уютная
+                                        атмосфера:</span>
+                                    расслабляйтесь под музыку
+                                    и наслаждайтесь кофе, пока мы работаем
+                                    над вашим образом
+                                </p>
+                                <p class="found__box_descr"><span class="found__box_descr-main"> Лучшие средства
+                                        ухода:</span> мы используем только качественную косметику мировых брендов</p>
+                                <p class="found__box_descr"><span class="found__box_descr-main">Персональный
+                                        подход:</span>
+                                    подбираем стиль, который подчеркнёт вашу индивидуальность</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services view">
+                <div class="services__content custom__container">
+                    <div class="services__row">
+                        <div class="services__row_top">
+                            <h2 class="services__head">Цены и услуги</h2>
+                            <a href="services.html" class="services__link">Ещё услуги <svg width="20" height="16"
+                                    viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M-1.20649e-06 6.84293L15.0331 6.84293L9.19424 1.6361L11.0289 -3.92138e-07L20 8L11.0289 16L9.19424 14.3639L15.0331 9.15707L-1.30764e-06 9.15707L-1.20649e-06 6.84293Z"
+                                        fill="#DD9714" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services__row_bottom">
+                            <div class="services__item">
+                                <div class="services__block">
+                                    <img src="./images/item1.png" alt="item-1" class="services__block_img">
+                                </div>
+                                <p class="services__time"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00068 0.0322266C12.4011 0.0322266 15.9682 3.59927 15.9682 7.99971C15.9682 12.4001 12.4011 15.9672 8.00068 15.9672C3.60024 15.9672 0.0332031 12.4001 0.0332031 7.99971C0.0332031 3.59927 3.60024 0.0322266 8.00068 0.0322266ZM8.00068 1.62572C6.3102 1.62572 4.68895 2.29727 3.4936 3.49262C2.29824 4.68797 1.6267 6.30922 1.6267 7.99971C1.6267 9.69019 2.29824 11.3114 3.4936 12.5068C4.68895 13.7021 6.3102 14.3737 8.00068 14.3737C9.69117 14.3737 11.3124 13.7021 12.5078 12.5068C13.7031 11.3114 14.3747 9.69019 14.3747 7.99971C14.3747 6.30922 13.7031 4.68797 12.5078 3.49262C11.3124 2.29727 9.69117 1.62572 8.00068 1.62572ZM8.00068 3.21922C8.19583 3.21924 8.38419 3.29089 8.53002 3.42057C8.67585 3.55025 8.76902 3.72894 8.79185 3.92275L8.79743 4.01597V7.66985L10.9542 9.82665C11.0971 9.97003 11.1801 10.1624 11.1863 10.3648C11.1924 10.5671 11.1214 10.7642 10.9875 10.916C10.8536 11.0679 10.667 11.163 10.4654 11.1822C10.2639 11.2014 10.0627 11.1432 9.90252 11.0194L9.82763 10.9533L7.43738 8.56301C7.31355 8.43907 7.23402 8.27777 7.21111 8.10408L7.20394 7.99971V4.01597C7.20394 3.80466 7.28788 3.602 7.4373 3.45258C7.58672 3.30316 7.78937 3.21922 8.00068 3.21922Z"
+                                            fill="white" />
+                                    </svg>
+                                    45 минут
+                                </p>
+                                <div class="services__body">
+                                    <div class="service__body_box">
+                                        <p class="services__body_price">2000 рублей</p>
+                                        <p class="services__body_name">мужская стрижка</p>
+                                    </div>
+                                    <a class="services__body_btn" href="#entry">Записаться</a>
+                                </div>
+                            </div>
+                            <div class="services__item">
+                                <div class="services__block">
+                                    <img src="./images/item2.png" alt="item-2" class="services__block_img">
+                                </div>
+                                <p class="services__time"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00068 0.0322266C12.4011 0.0322266 15.9682 3.59927 15.9682 7.99971C15.9682 12.4001 12.4011 15.9672 8.00068 15.9672C3.60024 15.9672 0.0332031 12.4001 0.0332031 7.99971C0.0332031 3.59927 3.60024 0.0322266 8.00068 0.0322266ZM8.00068 1.62572C6.3102 1.62572 4.68895 2.29727 3.4936 3.49262C2.29824 4.68797 1.6267 6.30922 1.6267 7.99971C1.6267 9.69019 2.29824 11.3114 3.4936 12.5068C4.68895 13.7021 6.3102 14.3737 8.00068 14.3737C9.69117 14.3737 11.3124 13.7021 12.5078 12.5068C13.7031 11.3114 14.3747 9.69019 14.3747 7.99971C14.3747 6.30922 13.7031 4.68797 12.5078 3.49262C11.3124 2.29727 9.69117 1.62572 8.00068 1.62572ZM8.00068 3.21922C8.19583 3.21924 8.38419 3.29089 8.53002 3.42057C8.67585 3.55025 8.76902 3.72894 8.79185 3.92275L8.79743 4.01597V7.66985L10.9542 9.82665C11.0971 9.97003 11.1801 10.1624 11.1863 10.3648C11.1924 10.5671 11.1214 10.7642 10.9875 10.916C10.8536 11.0679 10.667 11.163 10.4654 11.1822C10.2639 11.2014 10.0627 11.1432 9.90252 11.0194L9.82763 10.9533L7.43738 8.56301C7.31355 8.43907 7.23402 8.27777 7.21111 8.10408L7.20394 7.99971V4.01597C7.20394 3.80466 7.28788 3.602 7.4373 3.45258C7.58672 3.30316 7.78937 3.21922 8.00068 3.21922Z"
+                                            fill="white" />
+                                    </svg>
+                                    30 минут
+                                </p>
+                                <div class="services__body">
+                                    <div class="service__body_box">
+                                        <p class="services__body_price">1500 рублей</p>
+                                        <p class="services__body_name">уход за бородой</p>
+                                    </div>
+                                    <a class="services__body_btn" href="#entry">Записаться</a>
+                                </div>
+                            </div>
+                            <div class="services__item">
+                                <div class="services__block">
+                                    <img src="./images/item3.png" alt="item-3" class="services__block_img">
+                                </div>
+                                <p class="services__time"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00068 0.0322266C12.4011 0.0322266 15.9682 3.59927 15.9682 7.99971C15.9682 12.4001 12.4011 15.9672 8.00068 15.9672C3.60024 15.9672 0.0332031 12.4001 0.0332031 7.99971C0.0332031 3.59927 3.60024 0.0322266 8.00068 0.0322266ZM8.00068 1.62572C6.3102 1.62572 4.68895 2.29727 3.4936 3.49262C2.29824 4.68797 1.6267 6.30922 1.6267 7.99971C1.6267 9.69019 2.29824 11.3114 3.4936 12.5068C4.68895 13.7021 6.3102 14.3737 8.00068 14.3737C9.69117 14.3737 11.3124 13.7021 12.5078 12.5068C13.7031 11.3114 14.3747 9.69019 14.3747 7.99971C14.3747 6.30922 13.7031 4.68797 12.5078 3.49262C11.3124 2.29727 9.69117 1.62572 8.00068 1.62572ZM8.00068 3.21922C8.19583 3.21924 8.38419 3.29089 8.53002 3.42057C8.67585 3.55025 8.76902 3.72894 8.79185 3.92275L8.79743 4.01597V7.66985L10.9542 9.82665C11.0971 9.97003 11.1801 10.1624 11.1863 10.3648C11.1924 10.5671 11.1214 10.7642 10.9875 10.916C10.8536 11.0679 10.667 11.163 10.4654 11.1822C10.2639 11.2014 10.0627 11.1432 9.90252 11.0194L9.82763 10.9533L7.43738 8.56301C7.31355 8.43907 7.23402 8.27777 7.21111 8.10408L7.20394 7.99971V4.01597C7.20394 3.80466 7.28788 3.602 7.4373 3.45258C7.58672 3.30316 7.78937 3.21922 8.00068 3.21922Z"
+                                            fill="white" />
+                                    </svg>
+                                    30 минут
+                                </p>
+                                <div class="services__body">
+                                    <div class="service__body_box">
+                                        <p class="services__body_price">1500 рублей</p>
+                                        <p class="services__body_name">Детская стрижка</p>
+                                    </div>
+                                    <a class="services__body_btn" href="#entry">Записаться</a>
+                                </div>
+                            </div>
+                            <div class="services__item">
+                                <div class="services__block">
+                                    <img src="./images/item4.png" alt="item-4" class="services__block_img">
+                                </div>
+                                <p class="services__time"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00068 0.0322266C12.4011 0.0322266 15.9682 3.59927 15.9682 7.99971C15.9682 12.4001 12.4011 15.9672 8.00068 15.9672C3.60024 15.9672 0.0332031 12.4001 0.0332031 7.99971C0.0332031 3.59927 3.60024 0.0322266 8.00068 0.0322266ZM8.00068 1.62572C6.3102 1.62572 4.68895 2.29727 3.4936 3.49262C2.29824 4.68797 1.6267 6.30922 1.6267 7.99971C1.6267 9.69019 2.29824 11.3114 3.4936 12.5068C4.68895 13.7021 6.3102 14.3737 8.00068 14.3737C9.69117 14.3737 11.3124 13.7021 12.5078 12.5068C13.7031 11.3114 14.3747 9.69019 14.3747 7.99971C14.3747 6.30922 13.7031 4.68797 12.5078 3.49262C11.3124 2.29727 9.69117 1.62572 8.00068 1.62572ZM8.00068 3.21922C8.19583 3.21924 8.38419 3.29089 8.53002 3.42057C8.67585 3.55025 8.76902 3.72894 8.79185 3.92275L8.79743 4.01597V7.66985L10.9542 9.82665C11.0971 9.97003 11.1801 10.1624 11.1863 10.3648C11.1924 10.5671 11.1214 10.7642 10.9875 10.916C10.8536 11.0679 10.667 11.163 10.4654 11.1822C10.2639 11.2014 10.0627 11.1432 9.90252 11.0194L9.82763 10.9533L7.43738 8.56301C7.31355 8.43907 7.23402 8.27777 7.21111 8.10408L7.20394 7.99971V4.01597C7.20394 3.80466 7.28788 3.602 7.4373 3.45258C7.58672 3.30316 7.78937 3.21922 8.00068 3.21922Z"
+                                            fill="white" />
+                                    </svg>
+                                    40 минут
+                                </p>
+                                <div class="services__body">
+                                    <div class="service__body_box">
+                                        <p class="services__body_price">2500 рублей</p>
+                                        <p class="services__body_name">Королевское бритьё</p>
+                                    </div>
+                                    <a class="services__body_btn" href="#entry">Записаться</a>
+                                </div>
+                            </div>
+                            <div class="services__item">
+                                <div class="services__block">
+                                    <img src="./images/item5.png" alt="item-5" class="services__block_img">
+                                </div>
+                                <p class="services__time"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00068 0.0322266C12.4011 0.0322266 15.9682 3.59927 15.9682 7.99971C15.9682 12.4001 12.4011 15.9672 8.00068 15.9672C3.60024 15.9672 0.0332031 12.4001 0.0332031 7.99971C0.0332031 3.59927 3.60024 0.0322266 8.00068 0.0322266ZM8.00068 1.62572C6.3102 1.62572 4.68895 2.29727 3.4936 3.49262C2.29824 4.68797 1.6267 6.30922 1.6267 7.99971C1.6267 9.69019 2.29824 11.3114 3.4936 12.5068C4.68895 13.7021 6.3102 14.3737 8.00068 14.3737C9.69117 14.3737 11.3124 13.7021 12.5078 12.5068C13.7031 11.3114 14.3747 9.69019 14.3747 7.99971C14.3747 6.30922 13.7031 4.68797 12.5078 3.49262C11.3124 2.29727 9.69117 1.62572 8.00068 1.62572ZM8.00068 3.21922C8.19583 3.21924 8.38419 3.29089 8.53002 3.42057C8.67585 3.55025 8.76902 3.72894 8.79185 3.92275L8.79743 4.01597V7.66985L10.9542 9.82665C11.0971 9.97003 11.1801 10.1624 11.1863 10.3648C11.1924 10.5671 11.1214 10.7642 10.9875 10.916C10.8536 11.0679 10.667 11.163 10.4654 11.1822C10.2639 11.2014 10.0627 11.1432 9.90252 11.0194L9.82763 10.9533L7.43738 8.56301C7.31355 8.43907 7.23402 8.27777 7.21111 8.10408L7.20394 7.99971V4.01597C7.20394 3.80466 7.28788 3.602 7.4373 3.45258C7.58672 3.30316 7.78937 3.21922 8.00068 3.21922Z"
+                                            fill="white" />
+                                    </svg>
+                                    30 минут
+                                </p>
+                                <div class="services__body">
+                                    <div class="services__body_box">
+                                        <p class="services__body_price">1800 рублей</p>
+                                        <p class="services__body_name">Камуфляж седины</p>
+                                    </div>
+                                    <a class="services__body_btn" href="#entry">Записаться</a>
+                                </div>
+                            </div>
+                            <div class="services__item">
+                                <div class="services__block">
+                                    <img src="./images/item6.png" alt="item-6" class="services__block_img">
+                                </div>
+                                <p class="services__time"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00068 0.0322266C12.4011 0.0322266 15.9682 3.59927 15.9682 7.99971C15.9682 12.4001 12.4011 15.9672 8.00068 15.9672C3.60024 15.9672 0.0332031 12.4001 0.0332031 7.99971C0.0332031 3.59927 3.60024 0.0322266 8.00068 0.0322266ZM8.00068 1.62572C6.3102 1.62572 4.68895 2.29727 3.4936 3.49262C2.29824 4.68797 1.6267 6.30922 1.6267 7.99971C1.6267 9.69019 2.29824 11.3114 3.4936 12.5068C4.68895 13.7021 6.3102 14.3737 8.00068 14.3737C9.69117 14.3737 11.3124 13.7021 12.5078 12.5068C13.7031 11.3114 14.3747 9.69019 14.3747 7.99971C14.3747 6.30922 13.7031 4.68797 12.5078 3.49262C11.3124 2.29727 9.69117 1.62572 8.00068 1.62572ZM8.00068 3.21922C8.19583 3.21924 8.38419 3.29089 8.53002 3.42057C8.67585 3.55025 8.76902 3.72894 8.79185 3.92275L8.79743 4.01597V7.66985L10.9542 9.82665C11.0971 9.97003 11.1801 10.1624 11.1863 10.3648C11.1924 10.5671 11.1214 10.7642 10.9875 10.916C10.8536 11.0679 10.667 11.163 10.4654 11.1822C10.2639 11.2014 10.0627 11.1432 9.90252 11.0194L9.82763 10.9533L7.43738 8.56301C7.31355 8.43907 7.23402 8.27777 7.21111 8.10408L7.20394 7.99971V4.01597C7.20394 3.80466 7.28788 3.602 7.4373 3.45258C7.58672 3.30316 7.78937 3.21922 8.00068 3.21922Z"
+                                            fill="white" />
+                                    </svg>
+                                    20 минут
+                                </p>
+                                <div class="services__body">
+                                    <div class="services__body_box">
+                                        <p class="services__body_price">1000 рублей</p>
+                                        <p class="services__body_name">Укладка волос</p>
+                                    </div>
+                                    <a class="services__body_btn" href="#entry">Записаться</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="reviews" class="reviews view">
+                <div class="reviews__content custom__container">
+                    <h2 class="reviews__head">Что говорят наши клиенты</h2>
+                    <div class="reviews__wrapper">
+                        <div class="reviews__swiper swiper">
+                            <div class="reviews__swiper_wrapper swiper-wrapper">
+                                <div class="reviews__swiper_slide swiper-slide">
+                                    <div class="reviews__item">
+                                        <p class="reviews__item_descr">Попал в PRO BARBER по рекомендации друга, и
+                                            теперь я
+                                            тоже
+                                            стал
+                                            постоянным клиентом! Ребята здесь действительно профессионалы.
+                                            Барбер внимательно выслушал мои пожелания, предложил пару своих
+                                            идей, и я полностью ему доверился. Результат превзошел ожидания –
+                                            стильная стрижка, которая идеально подошла к моему образу.</p>
+                                        <div class="reviews__item_line"></div>
+                                        <p class="reviews__item_name">АЛЕКСЕЙ</p>
+                                        <p class="reviews__item_service">Мужская стрижка</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__swiper_slide swiper-slide">
+                                    <div class="reviews__item">
+                                        <p class="reviews__item_descr">Уже полгода хожу только в Pro Barber, и каждый
+                                            раз
+                                            получаю массу положительных эмоций. Это не просто место, где тебе сделают
+                                            стрижку
+                                            или подравняют бороду – это настоящая мужская территория! Мне нравится, что
+                                            здесь
+                                            всегда приветливая команда, а мастера работают быстро и качественно.</p>
+                                        <div class="reviews__item_line"></div>
+                                        <p class="reviews__item_name">ДМИТРИЙ</p>
+                                        <p class="reviews__item_service">Уход за бородой</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__button-prev"><svg width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30 12.8305L7.45037 12.8305L16.2086 3.06769L13.4566 -5.88207e-07L6.55671e-07 15L13.4566 30L16.2086 26.9323L7.45037 17.1695L30 17.1695L30 12.8305Z"
+                                        fill="#DD9714" />
+                                </svg>
+
+                            </div>
+                            <div class="reviews__button-next"><svg width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.34651e-06 12.8305L22.5496 12.8305L13.7914 3.06769L16.5434 -5.88207e-07L30 15L16.5434 30L13.7914 26.9323L22.5496 17.1695L1.15685e-06 17.1695L1.34651e-06 12.8305Z"
+                                        fill="#DD9714" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="reviews-pagination"></div>
+                    </div>
+                    <a href="#" class="reviews__link">Посмотреть другие отзывы</a>
+                </div>
+            </section>
+            <section id="entry" class="entry view">
+                <div class="entry__content custom__container">
+                    <div class="entry__row">
+                        <img src="./images/form.png" alt="form" class="entry__img">
+                        <div class="entry__body">
+                            <div class="entry__box">
+                                <h2 class="entry__box_head">Запишитесь
+                                    прямо сейчас</h2>
+                                <p class="entry__box_descr">Хотите выглядеть стильно? Мы сделаем это для Вас.
+                                    Оставьте заявку, и мы свяжемся с Вами
+                                    для подтверждения</p>
+                            </div>
+                            <form action="#" class="entry__form">
+                                <input type="text" class="entry__input" placeholder="Имя">
+                                <input type="tel" class="entry__input" placeholder="Номер телефона">
+                                <div class="entry__check">
+                                    <input type="checkbox" id="toggleCheckbox" class="entry__checkbox">
+                                    <label class="entry__checkbox_label entry__checkbox_text"
+                                        for="toggleCheckbox"></label>
+                                    <label class="entry__checkbox_text" for="toggleCheckbox">Я соглашаюсь с условиями
+                                        Политики в отношении
+                                        обработки персональных данных</label>
+                                </div>
+                                <input class="entry__btn" type="submit" value="Записаться">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="btn-up btn-up_hide"><svg width="26" height="29" viewBox="0 0 26 29" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.1198 29V7.20202L2.65866 15.6684L0 13.008L13 0L26 13.008L23.3413 15.6684L14.8802 7.20202V29H11.1198Z"
+                        fill="#121212" />
+                </svg>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__top">
+                    <div class="footer__top_content custom__container">
+                        <div class="footer__top_row">
+                            <div class="footer__top_item">
+                                <img class="footer__logo" src="./images/Лого.svg" alt="footer_logo">
+                                <p class="footer__descr">Место, где стрижка становится искусством,
+                                    а уход за внешностью — особым ритуалом.</p>
+                                <p class="footer__addres">г.Пенза, ул. Пушкина 137</p>
+                            </div>
+                            <ul class="footer__menu_list">
+                                <li>
+                                    <a href="index.html" class="footer__menu_item">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="services.html" class="footer__menu_item">Услуги</a>
+                                </li>
+                                <li>
+                                    <a href="reviews.html" class="footer__menu_item">Отзывы</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html" class="footer__menu_item">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="footer__top_info">
+                                <p class="footer__phone">8 (800) 555 35 35</p>
+                                <p class="footer__hours">Режим работы:
+                                </p>
+                                <p class="footer__hours_work"> Пн - Пт: 09:00-18:00
+                                    Сб - Вс: 10:00 - 16:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__bottom_content custom__container">
+                    <div class="footer__bottom_row">
+                        <a href="#" class="footer__bottom_link">Пользовательское соглашение</a>
+                        <p class="footer__bottom_copy">Все права защищены ©2025</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="./source/js/swiper.js"></script>
+    <script src="./source/js/burger.js"></script>
+    <script src="./source/js/scroll.js"></script>
+    <script src="./source/js/visibleBlocks.js"></script>
+</body>
+
+</html>
