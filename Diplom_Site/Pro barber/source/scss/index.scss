@@ -747,7 +747,7 @@ body._lock {
         }
 
         &:checked+label {
-            background-image: url('/Pro barber/images/pressed.svg');
+            background-image: url('../../images/pressed.svg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
         }
@@ -1050,7 +1050,7 @@ body._lock {
             &::after {
                 left: 0;
                 position: absolute;
-                height: 11%;
+                height: 10%;
                 width: 100%;
                 transition: all 0.3s ease 0s;
                 background-color: var(--color-primary);

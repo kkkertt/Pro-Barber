@@ -140,7 +140,7 @@ body._lock {
     }
 }
 
-.info {
+.requests {
     padding-top: 70px;
     margin-bottom: 70px;
 
@@ -153,87 +153,76 @@ body._lock {
         letter-spacing: 0.056em;
         -webkit-text-stroke: 1px black;
         text-shadow: 2px 1px 0 var(--color-primary);
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
-    &__row {
-        display: flex;
-        justify-content: space-between;
-        gap: 150px;
-    }
-
-    &__box {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 250px;
+    &__table {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         width: 100%;
 
-
         &_head {
-            font-family: "Raleway";
+            display: contents;
+            color: var(--color-lgray);
             font-weight: 700;
-            font-size: 30px;
-            line-height: 35.22px;
+            font-size: 18px;
+            line-height: 21.91px;
+            letter-spacing: 0.056em;
+
+            div {
+                padding: 10px 20px;
+                text-align: left;
+                border: 1px solid var(--color-mgray);
+            }
         }
 
-        &_tele {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 31.2px;
-            color: var(--color-primary);
-        }
-
-        &_time {
+        &_body {
+            display: contents;
             font-weight: 500;
             font-size: 20px;
-            line-height: 30px;
-            max-width: 200px;
+            line-height: 24.34px;
+            letter-spacing: 0.056em;
+
+            div {
+                padding: 33px 20px;
+                text-align: left;
+                border: 1px solid var(--color-mgray);
+            }
+        }
+
+        &_status {
+            display: flex;
+            justify-content: space-between;
+
+            &-waiting {
+                color: var(--color-primary);
+            }
+
+            &-success {
+                color: var(--color-green);
+            }
+
+            &-rejected {
+                color: var(--color-red);
+            }
         }
     }
 
-    &__map {
-        max-width: 620px;
-        width: 100%;
+    &__btn {
+        background: transparent;
+        max-height: 25px;
 
-        &_head {
-            font-family: "Raleway";
-            font-weight: 700;
-            font-size: 30px;
-            line-height: 35.22px;
-            margin-bottom: 20px;
-        }
-
-        &_wrapper {
-            width: 100%;
-            position: relative;
-            height: 365px;
-            margin-bottom: 10px;
-        }
-
-        &_addres {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 30px;
-            color: var(--color-primary);
+        &_block {
+            border: none !important;
+            padding: 0 !important;
+            border: none !important;
+            display: flex;
+            gap: 15px;
+            max-height: 25px;
         }
     }
 }
 
-#map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-[class*="copyrights-pane"] {
-    display: none !important;
-}
 
 .footer {
     background-color: var(--color-gray);
@@ -362,13 +351,6 @@ body._lock {
 }
 
 
-@media screen and (max-width : 1255px) {
-    .info__head {
-        font-size: 40px;
-        line-height: 52.5px;
-    }
-}
-
 @media screen and (max-width : 1100px) {
     .header {
         &__row {
@@ -483,22 +465,6 @@ body._lock {
     }
 }
 
-@media screen and (max-width : 1023px) {
-    .info {
-        padding-top: 50px;
-        margin-bottom: 50px;
-
-        &__row {
-            flex-direction: column;
-            gap: 50px;
-        }
-
-        &__map {
-            max-width: 100%;
-        }
-    }
-}
-
 @media screen and (max-width : 950px) {
     .footer {
         &__phone {
@@ -552,67 +518,6 @@ body._lock {
                 line-height: 25.47px;
             }
         }
-    }
-
-    .info {
-        padding-top: 30px;
-        margin-bottom: 30px;
-
-        &__row {
-            gap: 20px;
-        }
-
-        &__head {
-            font-size: 30px;
-            line-height: 34.5px;
-            margin-bottom: 20px;
-        }
-
-        &__box {
-            gap: 10px;
-
-            &_head {
-                font-size: 18px;
-                line-height: 23.22px;
-            }
-
-            &_tele {
-                font-size: 16px;
-                line-height: 21.2px;
-
-                svg {
-                    height: 30px;
-                    width: 30px;
-                }
-            }
-
-            &_time {
-                font-size: 14px;
-                line-height: 24px;
-                max-width: 140px;
-            }
-        }
-
-        &__map {
-            &_wrapper {
-                height: 175px;
-            }
-
-            &_head {
-                font-size: 18px;
-                line-height: 23.22px;
-            }
-
-            &_addres {
-                font-size: 14px;
-                line-height: 24px;
-            }
-        }
-
-    }
-
-    .btn-up {
-        right: 50px;
     }
 
     .footer {
