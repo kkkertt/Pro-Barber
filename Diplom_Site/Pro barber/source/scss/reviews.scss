@@ -753,8 +753,10 @@ body._lock {
 
     .footer {
         &__top {
-            padding-top: 50px;
-            padding-bottom: 50px;
+            &_content {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
 
             &_row {
                 gap: 20px;

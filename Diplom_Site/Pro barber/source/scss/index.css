@@ -837,8 +837,7 @@ body._lock {
   color: var(--color-lgray);
 }
 .footer__bottom_content {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 0;
 }
 .footer__bottom_row {
   display: flex;
@@ -1292,7 +1291,7 @@ body._lock {
   .btn-up {
     right: 50px;
   }
-  .footer__top {
+  .footer__top_content {
     padding-top: 50px;
     padding-bottom: 50px;
   }
