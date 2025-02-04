@@ -20,5 +20,3 @@ document.addEventListener('DOMContentLoaded', function() {
     checkBlocksVisibility();
     window.addEventListener('scroll', checkBlocksVisibility);
   });
-
-// AOS.init();
