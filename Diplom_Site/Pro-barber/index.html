@@ -352,19 +352,16 @@
                                         для подтверждения</p>
                                 </div>
                                 <form action="#" class="entry__form">
-                                    <input type="text" class="entry__input" placeholder="Имя">
-                                    <input type="tel" class="entry__input" placeholder="Номер телефона">
-                                    <div class="entry__check">
-                                        <input type="checkbox" id="toggleCheckbox" class="entry__checkbox">
-                                        <label class="entry__checkbox_label entry__checkbox_text"
-                                            for="toggleCheckbox"></label>
-                                        <label class="entry__checkbox_text" for="toggleCheckbox">Я соглашаюсь с
-                                            условиями
-                                            Политики в отношении
-                                            обработки персональных данных</label>
-                                    </div>
-                                    <input class="entry__btn" type="submit" value="Записаться">
-                                </form>
+																	<input type="text" class="entry__input" placeholder="Имя" name="name" required>
+																	<input type="tel" class="entry__input" placeholder="Номер телефона" name="phone" required>
+																	<div class="entry__check">
+																		<input type="checkbox" id="toggleCheckbox" class="entry__checkbox" name="agreement" required>
+																		<label class="entry__checkbox_label entry__checkbox_text" for="toggleCheckbox"></label>
+																		<label class="entry__checkbox_text" for="toggleCheckbox">Я соглашаюсь с условиями Политики в отношении обработки персональных данных</label>
+																</div>
+																	<input class="entry__btn" type="submit" value="Записаться">
+															</form>
+															<div id="notification" class="notification" style="display: none;"></div>
                             </div>
                         </div>
                     </div>
@@ -433,6 +430,7 @@
     <script src="./source/js/burger.js"></script>
     <script src="./source/js/scroll.js"></script>
     <script src="./source/js/visibleBlocks.js"></script>
+		<script src="./source/js/form.js"></script>
 </body>
 
 </html>

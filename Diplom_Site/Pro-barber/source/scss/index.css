@@ -193,7 +193,6 @@ body._lock {
 
 .header {
   background-color: var(--color-black);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 4;
@@ -698,9 +697,6 @@ body._lock {
 .entry__input::-moz-placeholder {
   color: var(--color-primary);
 }
-.entry__input:-ms-input-placeholder {
-  color: var(--color-primary);
-}
 .entry__input::placeholder {
   color: var(--color-primary);
 }
@@ -725,7 +721,6 @@ body._lock {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .entry__checkbox + label {
@@ -742,6 +737,23 @@ body._lock {
   background-image: url("../../images/pressed.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+.entry .notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.entry .notification.success {
+  background-color: #28a745;
+}
+.entry .notification.error {
+  background-color: #dc3545;
 }
 .entry__btn {
   font-family: "Raleway";
