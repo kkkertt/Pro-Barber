@@ -753,6 +753,26 @@ body._lock {
         }
     }
 
+		.notification {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			padding: 15px;
+			border-radius: 5px;
+			font-size: 14px;
+			color: white;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			z-index: 1000;
+	
+			&.success {
+					background-color: #28a745;
+			}
+	
+			&.error {
+					background-color: #dc3545;
+			}
+	}
+
     &__btn {
         font-family: "Raleway";
         font-weight: 700;
