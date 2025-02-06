@@ -1,34 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const content = document.getElementById('content');
-
-    content.addEventListener('click', function (e) {
-        if (e.target.classList.contains('delete-btn')) {
-            const reviewId = e.target.getAttribute('data-id');
-            if (confirm('Вы уверены, что хотите удалить этот отзыв?')) {
-                fetch('/php/controllers/delete_review.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ id: reviewId })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        e.target.closest('.reviews__item').remove();
-                        alert('Отзыв успешно удален.');
-                    } else {
-                        alert('Ошибка при удалении отзыва: ' + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Ошибка:', error);
-                    alert('Произошла ошибка при удалении отзыва.');
-                });
-            }
-        }
-    });
-});
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("rModal");
     const addReviewBtn = document.querySelector(".modal__btn_add");

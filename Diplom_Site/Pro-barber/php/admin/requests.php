@@ -20,8 +20,15 @@ foreach ($bookings as $booking) {
         <div class='request'>
             <h3>{$booking['name']}</h3>
             <p>Телефон: {$booking['phone']}</p>
-            <p>Статус: {$booking['status']}</p>
+            <p>Статус: 
+                <select class='status-select' data-id='{$booking['id']}'>
+                    <option value='new' " . ($booking['status'] === 'new' ? 'selected' : '') . ">Новая</option>
+                    <option value='confirmed' " . ($booking['status'] === 'confirmed' ? 'selected' : '') . ">Подтверждена</option>
+                    <option value='completed' " . ($booking['status'] === 'completed' ? 'selected' : '') . ">Завершена</option>
+                </select>
+            </p>
             <p>Дата создания: " . date('d.m.Y H:i', strtotime($booking['created_at'])) . "</p>
+						<button class='delete-btn' data-id='{$booking['id']}' data-type='booking'></button>
         </div>
     ";
 }

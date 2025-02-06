@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	const phoneInput = document.querySelector('[name="phone"]');
 	const notification = document.getElementById('notification');
 
-	// Автоматическое форматирование номера телефона
 	phoneInput.addEventListener('input', function () {
 			let value = this.value.replace(/\D/g, '');
 			if (value.startsWith('7')) {
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			this.value = formattedValue;
 	});
 
-	// Функция для показа уведомлений
 	function showNotification(message, type) {
 			notification.textContent = message;
 			notification.className = `notification ${type}`;
@@ -60,35 +58,29 @@ document.addEventListener('DOMContentLoaded', function () {
 			}, 7000);
 	}
 
-	// Обработка отправки формы
 	document.querySelector('.entry__form').addEventListener('submit', function (event) {
 			event.preventDefault();
 
-			// Получаем данные из формы
 			const name = this.querySelector('[name="name"]').value.trim();
 			const phone = this.querySelector('[name="phone"]').value.trim();
-			const agreement = this.querySelector('[name="agreement"]').checked ? 'on' : ''; // Преобразуем в строку 'on'
+			const agreement = this.querySelector('[name="agreement"]').checked ? 'on' : '';
 
-			// Валидация имени
 			if (!/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(name)) {
 					showNotification('Имя должно содержать только буквы.', 'error');
 					return;
 			}
 
-			// Валидация телефона
 			const phonePattern = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
 			if (!phonePattern.test(phone)) {
 					showNotification('Неверный формат телефона. Пример: +7 (999) 123-45-67', 'error');
 					return;
 			}
 
-			// Проверка согласия на обработку данных
 			if (!agreement) {
 					showNotification('Необходимо согласиться с политикой обработки данных.', 'error');
 					return;
 			}
 
-			// Отправляем данные на сервер
 			fetch('/php/controllers/save_booking.php', {
 					method: 'POST',
 					headers: {

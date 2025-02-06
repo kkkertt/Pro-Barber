@@ -20,7 +20,7 @@ foreach ($reviews as $review) {
     $html .= '
 <div class="reviews__row_bottom" id="reviewsContainer">
     <div class="reviews__item">
-    <button class="delete-btn" data-id="' . $review['id'] . '"></button>
+    <button class="delete-btn" data-id="' . $review['id'] . '" data-type="review"></button>
         <svg class="reviews__item_svg" width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="34" cy="34" r="32.5" stroke="#DD9714" stroke-width="3"></circle>
             <path d="M33.9993 28.8333C38.6017 28.8333 42.3327 25.1023 42.3327 20.5C42.3327 15.8976 38.6017 12.1666 33.9993 12.1666C29.397 12.1666 25.666 15.8976 25.666 20.5C25.666 25.1023 29.397 28.8333 33.9993 28.8333Z" fill="#DD9714"></path>

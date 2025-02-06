@@ -53,3 +53,62 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadContent('reviews');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+	const content = document.getElementById('content');
+	const messageContainer = document.getElementById('message');
+
+	// Функция для отображения сообщений
+	function showMessage(text, type = 'success') {
+			messageContainer.textContent = text;
+			messageContainer.className = `message ${type}`;
+			messageContainer.style.display = 'block';
+
+			// Скрыть сообщение через 3 секунды
+			setTimeout(() => {
+					messageContainer.style.display = 'none';
+			}, 3000);
+	}
+
+	content.addEventListener('click', function (e) {
+			if (e.target.classList.contains('delete-btn')) {
+					const id = e.target.getAttribute('data-id');
+					const type = e.target.getAttribute('data-type');
+
+					let url = '';
+					if (type === 'review') {
+							url = '/php/controllers/delete_review.php';
+					} else if (type === 'booking') {
+							url = '/php/controllers/delete_booking.php';
+					}
+
+					fetch(url, {
+							method: 'POST',
+							headers: {
+									'Content-Type': 'application/json'
+							},
+							body: JSON.stringify({ id: id })
+					})
+					.then(response => response.json())
+					.then(data => {
+							if (data.status === 'success') {
+									// Удаляем элемент из DOM
+									const elementToRemove = e.target.closest(`.${type === 'review' ? 'reviews__item' : 'request'}`);
+									if (elementToRemove) {
+											elementToRemove.remove();
+											showMessage(`Элемент (${type}) успешно удален.`, 'success');
+									} else {
+											console.error(`Элемент с классом .${type === 'review' ? 'reviews__item' : 'request'} не найден.`);
+											showMessage(`Ошибка: элемент (${type}) не найден.`, 'error');
+									}
+							} else {
+									showMessage(`Ошибка при удалении элемента (${type}): ${data.message}`, 'error');
+							}
+					})
+					.catch(error => {
+							console.error('Ошибка:', error);
+							showMessage('Произошла ошибка при удалении элемента.', 'error');
+					});
+			}
+	});
+});
