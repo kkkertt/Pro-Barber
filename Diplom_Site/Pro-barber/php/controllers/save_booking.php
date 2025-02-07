@@ -11,7 +11,7 @@ try {
     $phone = trim($data['phone']);
     $agreement = isset($data['agreement']) && $data['agreement'] === 'on';
 
-    if (!preg_match('/^[a-zA-Zа-яА-ЯёЁ\s]+$/', $name)) {
+    if (!preg_match('/^[a-zA-Zа-яА-ЯёЁ\s\-\'\x{0401}\x{0451}]+$/u', $name)) {
         echo json_encode(['status' => 'error', 'message' => 'Недопустимое имя.']);
         exit;
     }

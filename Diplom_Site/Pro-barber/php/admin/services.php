@@ -32,31 +32,6 @@ foreach ($services as $service) {
 	";
 }
 
-// $html .= "
-// 	<div id='modal' class='modal' style='display: none;'>
-// 			<div class='modal-content'>
-// 					<span class='close-modal' id='close-modal'>&times;</span>
-// 					<h2>Редактирование услуги</h2>
-// 					<form id='edit-service-form'>
-// 							<input type='hidden' id='service-id' name='id'>
-// 							<label for='name'>Название:</label>
-// 							<input type='text' id='name' name='name' required><br>
-
-// 							<label for='price'>Цена:</label>
-// 							<input type='number' id='price' name='price' required><br>
-
-// 							<label for='description'>Описание:</label>
-// 							<textarea id='description' name='description' required></textarea><br>
-
-// 							<label for='image_url'>URL изображения:</label>
-// 							<input type='text' id='image_url' name='image_url' required><br>
-
-// 							<button type='submit'>Сохранить изменения</button>
-// 					</form>
-// 			</div>
-// 	</div>
-// ";
-
 echo json_encode([
     'status' => 'success',
     'html' => $html,

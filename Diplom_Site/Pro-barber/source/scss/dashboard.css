@@ -292,6 +292,10 @@ body .pagination button:disabled {
   background-color: var(--color-primary);
   margin-bottom: 10px;
 }
+.services__item img {
+  max-width: 500px;
+  max-height: 400px;
+}
 .services__body_name {
   font-family: "Raleway";
   font-weight: 700;
@@ -387,4 +391,28 @@ body .pagination button:disabled {
   top: 5px;
   font-size: 24px;
   cursor: pointer;
+  color: var(--color-black);
+}
+.modal .modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+.modal .modal-content form input {
+  border: 1px solid black;
+  border-radius: 0.2em;
+  padding: 1em;
+}
+.modal .modal-content form label {
+  color: black;
+}
+.modal .modal-content form textarea {
+  border: 1px solid black;
+  border-radius: 0.2em;
+  padding: 1em;
+}
+.modal .modal-content form button {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 1em;
+  border-radius: 0.2em;
 }/*# sourceMappingURL=dashboard.css.map */
