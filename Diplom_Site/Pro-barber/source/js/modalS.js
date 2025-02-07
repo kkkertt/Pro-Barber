@@ -2,26 +2,20 @@ const btn = document.querySelector('.btn-call');
 const modal = document.getElementById('sModal');
 const closeBtn = document.querySelector('.modal__btn_close');
 
-// Функция для открытия модального окна
 function openModal() {
     modal.style.display = 'block';
-    document.body.classList.add('_lock'); // Блокируем прокрутку страницы
+    document.body.classList.add('_lock');
 }
 
-// Функция для закрытия модального окна
 function closeModal() {
     modal.style.display = 'none';
-    document.body.classList.remove('_lock'); // Разблокируем прокрутку страницы
-    modal.querySelector('form').reset(); // Очищаем форму при закрытии
+    document.body.classList.remove('_lock');
+    modal.querySelector('form').reset();
 }
 
-// Открытие модального окна при нажатии на кнопку "Записаться"
 btn.addEventListener('click', openModal);
-
-// Закрытие модального окна при клике на кнопку "Закрыть"
 closeBtn.addEventListener('click', closeModal);
 
-// Закрытие модального окна при клике вне области окна
 window.onclick = function (e) {
     if (e.target === modal) {
         closeModal();
@@ -32,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	const phoneInput = modal.querySelector('[placeholder="Номер телефона"]');
 	const notification = document.getElementById('notification');
 
-	// Форматирование номера телефона
 	phoneInput.addEventListener('input', function () {
 			let value = this.value.replace(/\D/g, '');
 			if (value.startsWith('7')) {
@@ -73,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			this.value = formattedValue;
 	});
 
-	// Функция для показа уведомлений
 	function showNotification(message, type) {
 			notification.textContent = message;
 			notification.className = `notification ${type}`;
@@ -83,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			}, 7000);
 	}
 
-	// Обработчик отправки формы
 	modal.querySelector('form').addEventListener('submit', function (event) {
 			event.preventDefault();
 
@@ -91,26 +82,22 @@ document.addEventListener('DOMContentLoaded', function () {
 			const phone = modal.querySelector('[placeholder="Номер телефона"]').value.trim();
 			const agreement = modal.querySelector('#toggleCheckbox').checked ? 'on' : '';
 
-			// Валидация имени
 			if (!/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(name)) {
 					showNotification('Имя должно содержать только буквы.', 'error');
 					return;
 			}
 
-			// Валидация телефона
 			const phonePattern = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
 			if (!phonePattern.test(phone)) {
 					showNotification('Неверный формат телефона. Пример: +7 (999) 123-45-67', 'error');
 					return;
 			}
 
-			// Проверка согласия
 			if (!agreement) {
 					showNotification('Необходимо согласиться с политикой обработки данных.', 'error');
 					return;
 			}
 
-			// Отправка данных на сервер
 			fetch('/php/controllers/save_booking.php', {
 					method: 'POST',
 					headers: {
@@ -127,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(result => {
 					if (result.status === 'success') {
 							showNotification('Спасибо! Ваша заявка успешно отправлена.', 'success');
-							closeModal(); // Закрываем модальное окно
+							closeModal();
 					} else {
 							showNotification(`Произошла ошибка: ${result.message}`, 'error');
 					}

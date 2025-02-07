@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	const links = document.querySelectorAll('.sidebar a');
 	const messageContainer = document.getElementById('message');
 
-	// Функция для отображения сообщений
 	function showMessage(text, type = 'success') {
 			messageContainer.textContent = text;
 			messageContainer.className = `message ${type}`;
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			}, 3000);
 	}
 
-	// Функция для загрузки контента
 	function loadContent(page, pageNumber = 1) {
 			fetch(`/php/admin/${page}.php?page=${pageNumber}`)
 					.then(response => {
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
 					});
 	}
 
-	// Настройка пагинации
 	function setupPagination(totalPages, currentPage, currentNumber) {
 			const pagination = document.createElement('div');
 			pagination.className = 'pagination';
@@ -51,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			content.appendChild(pagination);
 	}
 
-	// Обработка кликов на ссылки в боковом меню
 	links.forEach(link => {
 			link.addEventListener('click', function (e) {
 					e.preventDefault();
@@ -64,9 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 	});
 
-	// Обработка кликов внутри контента
 	content.addEventListener('click', function (e) {
-			// Удаление элемента (отзывы, бронирования или услуги)
 			if (e.target.classList.contains('delete-btn')) {
 					const id = e.target.getAttribute('data-id');
 					const type = e.target.getAttribute('data-type');
@@ -108,7 +102,5 @@ document.addEventListener('DOMContentLoaded', function () {
 					});
 			}
 	});
-
-	// Загрузка начального контента
 	loadContent('reviews');
 });
